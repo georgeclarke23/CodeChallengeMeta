@@ -30,16 +30,16 @@ If you have docker and python  already installed in an environment, just clone t
 #### or
 You can  provision an EC2 instance that uses Ubuntu operating system, ssh into the EC2 instance and run the following commands: 
 ```bash
-wget https://github.com/georgeclarke23/CodeChallengeMetaPack/archive/main.zip
+wget https://github.com/georgeclarke23/CodeChallengeMetaPack/archive/master.zip
 sudo apt-get install unzip 
-unzip main.zip
-cd CodeChallengeMetaPack-main
+unzip master.zip
+cd CodeChallengeMetaPack-master
 . ./build_instance.sh
 ```
 
 Once this is done, time to run the application in a container. SSH back into the EC2 instance and execute the following commands 
 ```bash
-cd CodeChallengeMetaPack-main/
+cd CodeChallengeMetaPack-master/Solution
 
 # This command will start the docker containers on the EC2 instance
 . ./build_and_run.sh
