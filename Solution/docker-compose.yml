@@ -183,7 +183,7 @@ services:
 #      KSQL_CONSUMER_INTERCEPTOR_CLASSES: "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor"
 
 
-  ksqldb2:
+  ksqldb-second:
     # *-----------------------------*
     # To connect to ksqlDB CLI
     #   docker exec --interactive --tty ksqldb ksql http://localhost:8088
