@@ -47,7 +47,7 @@ cd CodeChallengeMetaPack-master/Solution
 # This command will start the docker containers on the EC2 instance
 . ./build_and_run.sh
 ```
-
+NOTE: There are multiple ports used in this project so I will suggest you keep your port range open to all ports on the security group.
 
 ## Query Kafka
 
