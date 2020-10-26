@@ -86,7 +86,7 @@ INSERT INTO INCIDENTS (
 def main():
     path_to_files = "datasets/"
     mydb = mysql.connector.connect(
-        host="localhost",
+        host="34.245.77.221",
         user="root",
         password="debezium",
         database="demo"
