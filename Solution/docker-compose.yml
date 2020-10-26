@@ -176,37 +176,6 @@ services:
       KSQL_KSQL_CONNECT_URL: http://kafka-connect:8083
       KSQL_KSQL_SERVICE_ID: confluent_rmoff_01
       KSQL_KSQL_HIDDEN_TOPICS: '^_.*'
-      KSQL_KSQL_QUERIES_FILE: '/app/app.ksql'
-    volumes:
-      - $PWD/app:/app
-  #      KSQL_PRODUCER_INTERCEPTOR_CLASSES: "io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor"
-#      KSQL_CONSUMER_INTERCEPTOR_CLASSES: "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor"
-
-
-  ksqldb-second:
-    # *-----------------------------*
-    # To connect to ksqlDB CLI
-    #   docker exec --interactive --tty ksqldb ksql http://localhost:8088
-    # *-----------------------------*
-    image: confluentinc/ksqldb-server:0.12.0
-    hostname: ksqldb-second
-    container_name: ksqldb-second
-    depends_on:
-      - kafka
-      - kafka-connect
-      - schema-registry
-    ports:
-      - "18088:8088"
-    environment:
-      KSQL_LISTENERS: http://0.0.0.0:18088
-      KSQL_BOOTSTRAP_SERVERS: kafka:29092
-      KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE: "true"
-      KSQL_KSQL_LOGGING_PROCESSING_TOPIC_AUTO_CREATE: "true"
-      KSQL_KSQL_SCHEMA_REGISTRY_URL: http://schema-registry:8081
-      KSQL_STREAMS_PRODUCER_MAX_BLOCK_MS: 9223372036854775807
-      KSQL_KSQL_CONNECT_URL: http://kafka-connect:8083
-      KSQL_KSQL_SERVICE_ID: confluent_rmoff_01
-      KSQL_KSQL_HIDDEN_TOPICS: '^_.*'
 #      KSQL_KSQL_QUERIES_FILE: '/app/app.ksql'
     volumes:
       - $PWD/app:/app
