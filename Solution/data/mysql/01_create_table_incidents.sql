@@ -1,7 +1,7 @@
 use demo;
 
 create table INCIDENTS (
-	IncidentNumber INT NOT NULL PRIMARY KEY,
+	IncidentNumber VARCHAR(100) NOT NULL PRIMARY KEY,
 	DateOfCall VARCHAR(50),
 	CalYear VARCHAR(50),
 	TimeOfCall VARCHAR(50),
