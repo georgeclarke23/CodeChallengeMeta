@@ -32,7 +32,7 @@ INSERT INTO INCIDENTS (
     Northing_rounded,
     FRS,
     Longitude,
-    Latitude
+    Latitude,
     IncidentStationGround,
     FirstPumpArriving_AttendanceTime,
     FirstPumpArriving_DeployedFromStation,
