@@ -189,8 +189,8 @@ services:
     #   docker exec --interactive --tty ksqldb ksql http://localhost:8088
     # *-----------------------------*
     image: confluentinc/ksqldb-server:0.12.0
-    hostname: ksqldb2
-    container_name: ksqldb2
+    hostname: ksqldb-second
+    container_name: ksqldb-second
     depends_on:
       - kafka
       - kafka-connect
