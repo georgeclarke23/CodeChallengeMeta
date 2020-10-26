@@ -51,10 +51,12 @@ cd CodeChallengeMetaPack-master/Solution
 Once all docker containers are up you can execute the following command to use the KSQL cli to query the data in kafka by creating streams.
 
 ```bash
-docker exec -it ksqldb ksql http://localhost:8088
+docker exec -it ksqldb-second ksql http://localhost:18088
+SHOW TABLES;
 ```
 
-All queries are saved in `app/app.kqsl`
+
+All queries are saved in `app/samples.kqsl`
 
 Note: I have intentionally allowed the server to run in interactive mode due to un-complete sink to No SQL data base.
 
