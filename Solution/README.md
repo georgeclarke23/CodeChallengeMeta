@@ -25,6 +25,9 @@ Note: The datasets had to be scaled down for storage purposes, you can replace t
 If you have docker and python  already installed in an environment, just clone the project and run the following command:
 
 ```bash
+python3 -m venv .venv 
+. .venv/bin/activate
+pip install -r requirements.txt
 . ./buid_and_run.sh
 ``` 
 #### or
